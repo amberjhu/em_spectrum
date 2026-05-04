@@ -1,3 +1,4 @@
+#!/bin/python3
 # em_spectrum.py
 #
 # Copyright (c) 2026 Antoni AUGÉ
@@ -35,12 +36,12 @@ def wavenumber_to_wavelength(eta):
 # ------------------------------------------------------------
 def draw_spectral_zones(ax):
     zones = [
-        ("$\gamma$ rays", 1e-6, 1e-4),
-        ("X-rays", 0.0001, 0.01),
-        ("UV", 0.01, 0.4),
-        ("Visible", 0.4, 0.7),
-        ("IR", 0.7, 100),
-        ("Microwave/ Radio waves", 100, 1e5)
+        (r"$\gamma$ rays", 1e-6, 1e-4),
+        (r"X-rays", 0.0001, 0.01),
+        (r"UV", 0.01, 0.4),
+        (r"Visible", 0.4, 0.7),
+        (r"IR", 0.7, 100),
+        (r"Microwave/ Radio waves", 100, 1e5)
     ]
 
     for name, start, end in zones:
@@ -80,7 +81,7 @@ def draw_visible_band(ax):
                 (x0, 0),
                 dx,
                 3,
-                color=cmap(1 - frac),
+                color=cmap(frac),
                 linewidth=0
             )
         )

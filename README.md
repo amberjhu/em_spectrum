@@ -14,3 +14,15 @@ This repository contains:
 
 You are free to reuse, modify, and redistribute both the code and figure, subject to the respective licenses. Please provide attribution to **Antoni AUGÉ** when reusing the figure.
 
+## Building
+
+For Ubuntu Linux with a Bash shell:
+
+```bash
+# Only necessary if you don't already have LaTeX installed
+sudo apt install texlive texlive-latex-extra texlive-fonts-recommended dvipng cm-super
+# Enter a virtual environment where you can safely install dependencies
+. .venv/bin/activate
+# Install dependencies
+pip install -r requirements.txt
+```
